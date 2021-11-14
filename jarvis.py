@@ -118,6 +118,11 @@ if __name__ == '__main__':
             except Exception as e:
                 print(e)
                 speak("Sorry unable to sen the email!")
+        elif 'search' in query:
+            speak("Searching google......")
+            speak("According to google")
+            for i in search(query, tld="co.in", num=20, stop=10, pause=2):
+                print(i)
 
         elif "quit the system" in query:
             speak("Quitting the system")
